@@ -26,5 +26,9 @@ struct Product: Codable, Identifiable {
     }
 }
 
-
+struct ProductRow: Identifiable {
+    let id = UUID()
+    let title: String
+    let products: [Product]
+}
 
