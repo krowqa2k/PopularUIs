@@ -17,12 +17,12 @@ struct ContentView: View {
     var body: some View {
         ScrollView{
             VStack {
-                ForEach(users) { user in
-                    Text(user.firstName)
-                }
-//                ForEach(products) { product in
-//                    Text(product.title)
+//                ForEach(users) { user in
+//                    Text(user.firstName)
 //                }
+                ForEach(products) { product in
+                    Text(product.title)
+                }
             }
         }
         .padding()
@@ -36,7 +36,7 @@ struct ContentView: View {
             users = try await DatabaseHelper().getUsers()
             products = try await DatabaseHelper().getProducts()
         } catch {
-            
+            print("Error fetching data: \(error)")
         }
     }
 }

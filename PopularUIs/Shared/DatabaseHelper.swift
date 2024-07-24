@@ -10,7 +10,7 @@ import Foundation
 struct DatabaseHelper {
     
     func getProducts() async throws -> [Product] {
-        guard let url = URL(string: "https://dummyjson.com/products/1") else {
+        guard let url = URL(string: "https://dummyjson.com/products") else {
             throw URLError(.badURL)
         }
         
