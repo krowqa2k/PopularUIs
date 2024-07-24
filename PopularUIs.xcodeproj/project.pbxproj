@@ -67,6 +67,7 @@
 		843267462C512A0100BFB7AC /* PopularUIs */ = {
 			isa = PBXGroup;
 			children = (
+				843267692C513CC000BFB7AC /* Spotify */,
 				843267472C512A0100BFB7AC /* PopularUIsApp.swift */,
 				843267552C512A2000BFB7AC /* Shared */,
 				843267492C512A0100BFB7AC /* ContentView.swift */,
@@ -94,6 +95,13 @@
 				8432675F2C512FBE00BFB7AC /* Product.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		843267692C513CC000BFB7AC /* Spotify */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spotify;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

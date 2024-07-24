@@ -19,9 +19,4 @@ struct User: Codable, Identifiable {
     let gender, email, phone, username: String
     let password, birthDate, image, bloodGroup: String
     let height, weight: Double
-    let eyeColor: String
-    let ip: String
-    let macAddress, university: String
-    let ein, ssn, userAgent: String
-    let role: String
 }

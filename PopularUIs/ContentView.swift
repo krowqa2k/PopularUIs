@@ -22,6 +22,7 @@ struct ContentView: View {
 //                }
                 ForEach(products) { product in
                     Text(product.title)
+                        .foregroundStyle(.spotifyGreen)
                 }
             }
         }
