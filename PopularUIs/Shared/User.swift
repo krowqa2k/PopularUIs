@@ -20,6 +20,9 @@ struct User: Codable, Identifiable {
     let password, birthDate, image, bloodGroup: String
     let height, weight: Double
     
+    var work: String = "Worker as some job"
+    var education: String = "Graduate Degree"
+    
     static var mock: User {
             User(
                 id: 1,
