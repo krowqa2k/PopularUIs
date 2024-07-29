@@ -38,6 +38,7 @@
 		84C0EEF62C5698A800F854CF /* BumbleHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0EEF52C5698A800F854CF /* BumbleHeartView.swift */; };
 		84DE2A912C57CE3000DB407F /* BumbleProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE2A902C57CE3000DB407F /* BumbleProfileImageCell.swift */; };
 		84DE2A932C57D1E600DB407F /* BumbleChatPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE2A922C57D1E600DB407F /* BumbleChatPreviewCell.swift */; };
+		84DE2A952C57D5F000DB407F /* BumbleChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE2A942C57D5F000DB407F /* BumbleChatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		84C0EEF52C5698A800F854CF /* BumbleHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleHeartView.swift; sourceTree = "<group>"; };
 		84DE2A902C57CE3000DB407F /* BumbleProfileImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleProfileImageCell.swift; sourceTree = "<group>"; };
 		84DE2A922C57D1E600DB407F /* BumbleChatPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleChatPreviewCell.swift; sourceTree = "<group>"; };
+		84DE2A942C57D5F000DB407F /* BumbleChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleChatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			children = (
 				84BF17642C566B6500C1260B /* BumbleHomeView.swift */,
 				84C0EEF32C56937700F854CF /* BumbleCardView.swift */,
+				84DE2A942C57D5F000DB407F /* BumbleChatsView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				84BF17652C566B6500C1260B /* BumbleHomeView.swift in Sources */,
 				843267572C512A2F00BFB7AC /* ImageLoaderView.swift in Sources */,
 				843267722C51402A00BFB7AC /* Category.swift in Sources */,
+				84DE2A952C57D5F000DB407F /* BumbleChatsView.swift in Sources */,
 				8432676F2C513EE500BFB7AC /* SpotifyCategoryCell.swift in Sources */,
 				84BA24412C527FED0049155B /* SpotifyViewModel.swift in Sources */,
 				84B07FEF2C56ADC10054EF51 /* InterestPillGridView.swift in Sources */,

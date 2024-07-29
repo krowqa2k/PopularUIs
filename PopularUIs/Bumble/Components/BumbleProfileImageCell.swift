@@ -15,6 +15,8 @@ struct BumbleProfileImageCell: View {
     
     var body: some View {
         ZStack{
+            Color.bumbleWhite
+            
             ImageLoaderView(urlString: imageName)
                 .clipShape(Circle())
                 .padding(5)

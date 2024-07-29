@@ -18,13 +18,14 @@ struct BumbleChatPreviewCell: View {
     
     var body: some View {
         HStack(spacing: 8) {
-            BumbleProfileImageCell(imageName: imageName, percentageRemaining: percentageRemaining, hasNewMessage: false)
+            BumbleProfileImageCell(imageName: imageName, percentageRemaining: percentageRemaining, hasNewMessage: hasNewMessage)
                 .padding(.horizontal, 6)
             
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Text(userName)
                         .font(.title3)
+                        .foregroundStyle(.bumbleBlack)
                         .fontWeight(.medium)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     if isYourMove {
@@ -46,7 +47,7 @@ struct BumbleChatPreviewCell: View {
             }
             .lineLimit(1)
         }
-        .padding(.horizontal)
+        .background(Color.bumbleWhite)
     }
 }
 
