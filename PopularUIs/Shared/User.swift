@@ -20,9 +20,15 @@ struct User: Codable, Identifiable {
     let password, birthDate, image, bloodGroup: String
     let height, weight: Double
     
-    var work: String = "Worker as some job"
-    var education: String = "Graduate Degree"
-    var aboutMe: String = "This is a sentance about me that will look good on my profile"
+    var work: String {
+        "Worker as Some Job"
+    }
+    var education: String {
+        "Graduate Degree"
+    }
+    var aboutMe: String {
+        "This is a sentence about me that will look good on my profile!"
+    }
     
     var basics: [UserInterest] {
         [UserInterest(iconName: "ruler", emoji: nil, text: "\(height)"),
