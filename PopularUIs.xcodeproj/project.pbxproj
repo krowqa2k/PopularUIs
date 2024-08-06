@@ -107,6 +107,7 @@
 		843267462C512A0100BFB7AC /* PopularUIs */ = {
 			isa = PBXGroup;
 			children = (
+				C18F0A932C62915400359F32 /* Netflix */,
 				84BF17612C5664E800C1260B /* Bumble */,
 				843267692C513CC000BFB7AC /* Spotify */,
 				843267472C512A0100BFB7AC /* PopularUIsApp.swift */,
@@ -218,6 +219,13 @@
 				84DE2A942C57D5F000DB407F /* BumbleChatsView.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C18F0A932C62915400359F32 /* Netflix */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Netflix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
