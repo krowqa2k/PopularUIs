@@ -10,6 +10,8 @@ import SwiftfulUI
 
 struct NetflixHomeView: View {
     
+    @Environment(\.router) var router
+    
     @State private var filters = FilterModel.mockArray
     @State private var selectedFilter: FilterModel? = nil
     @State private var fullHeaderSize:CGSize = .zero
@@ -108,11 +110,20 @@ struct NetflixHomeView: View {
         }
     }
     
+    private func onProductPressed(product: Product) {
+        router.showScreen(.sheet) { _ in
+            NetflixDetailsView_(product: product)
+        }
+    }
+    
     private var header: some View {
         HStack(spacing: 0) {
             Text("For You")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.title)
+                .onTapGesture {
+                    router.dismissScreen()
+                }
             
             HStack(spacing: 16) {
                 Image(systemName: "tv.badge.wifi")
@@ -155,11 +166,11 @@ struct NetflixHomeView: View {
             isNetflixFilm: true,
             title: product.title,
             categories: [product.category.capitalized, product.brand ?? ""]) {
-                    
+                    onProductPressed(product: product)
             } onMyListPressed: {
                     
             } onPlayPressed: {
-                    
+                    onProductPressed(product: product)
             }
     }
     
@@ -180,6 +191,9 @@ struct NetflixHomeView: View {
                                     isRecentlyAdded: product.recentlyAdded,
                                     topTenRanking: rowIndex == 1 ? (index + 1) : nil
                                 )
+                                .onTapGesture {
+                                    onProductPressed(product: product)
+                                }
                             }
                         }
                         .padding(.horizontal, 16)

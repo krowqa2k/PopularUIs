@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NetflixDetailsView_: View {
     
+    @Environment(\.router) var router
+    
     var product: Product = .mock
     
     @State private var progress: Double = 0.2
@@ -26,7 +28,7 @@ struct NetflixDetailsView_: View {
                     progress: progress) {
                         
                     } onXmarkPressed: {
-                        
+                        router.dismissScreen()
                     }
                 
                 ScrollView(.vertical) {
@@ -74,6 +76,9 @@ struct NetflixDetailsView_: View {
                                         isRecentlyAdded: product.recentlyAdded,
                                         topTenRanking: nil
                                     )
+                                    .onTapGesture {
+                                        onProductPressed(product: product)
+                                    }
                                 }
                             })
                         }
@@ -90,6 +95,12 @@ struct NetflixDetailsView_: View {
         }
         .toolbar(.hidden, for: .navigationBar)
         .ignoresSafeArea(edges: .bottom)
+    }
+    
+    private func onProductPressed(product: Product) {
+        router.showScreen(.sheet) { _ in
+            NetflixDetailsView_(product: product)
+        }
     }
     
     private func getData() async {
