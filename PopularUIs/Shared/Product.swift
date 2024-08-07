@@ -40,6 +40,11 @@ struct Product: Codable, Identifiable {
             images: [Constants.randomImage, Constants.randomImage, Constants.randomImage]
         )
     }
+    
+    let recentlyAdded: Bool = {
+        return Int.random(in: 1...4) == 1
+    }()
+    
 }
 
 struct ProductRow: Identifiable {
